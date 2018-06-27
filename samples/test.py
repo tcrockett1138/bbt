@@ -1,13 +1,19 @@
 import requests
-from awsv2_auth import AwsV2Auth
+import time
+from requests_aws4auth import AWS4Auth
 
 access_key = "131734217793108142@ecstestdrive.emc.com"
 secret_key = "c9wFEikxOMgbUR6Vlcw6519kwd9y8hUv6FgKUDh5"
 endpoint = "https://object.ecstestdrive.com"
-bucket = "newbucket1"
+region = "us-east-1"
+service = "s3"
+ticks = time.time()
+bucket = "bucket" + str(ticks)
 
-auth = AwsV2Auth(access_key, secret_key)
-
+auth = AWS4Auth(access_key,
+                secret_key,
+                region,
+                service)
 # Make Bucket
 response = requests.put(endpoint + "/" + bucket, auth=auth)
 print(str(response.status_code))

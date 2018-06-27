@@ -1,0 +1,6 @@
+# bucket name, versioning state [leave empty or set to {Enabled or Suspended}]
+bucket_1
+bucket_2, Enabled
+bucket_3
+bucket_4, Suspended
+bucket_5
