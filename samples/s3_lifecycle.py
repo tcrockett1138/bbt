@@ -5,8 +5,8 @@ import base64
 import hashlib
 import xml.etree.ElementTree as ET
 
-access_key = "131734217793108142@ecstestdrive.emc.com"
-secret_key = "c9wFEikxOMgbUR6Vlcw6519kwd9y8hUv6FgKUDh5"
+access_key = ""
+secret_key = ""
 endpoint = "https://object.ecstestdrive.com/"
 region = "us-east-1"
 service = "s3"
